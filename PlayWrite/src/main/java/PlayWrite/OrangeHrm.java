@@ -13,6 +13,7 @@ public class OrangeHrm {
 		Playwright pw=Playwright.create();
 		Browser b=pw.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 		Page pe=b.newPage();
+		
 		pe.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		Locator lr=pe.locator("//input[@name='username']");
 		//lr.click();
