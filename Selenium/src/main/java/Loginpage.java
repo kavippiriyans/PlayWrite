@@ -1,0 +1,52 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class Loginpage extends DriverClass
+{
+
+	static By loginpage_xpath=By.xpath("//h5[text()='Login']");
+	static By Username_xpath=By.xpath("//input[@name='username']");
+	static By Password_xpath=By.xpath("//input[@name='password']");
+	static By Loginbutton_xpath=By.xpath("//button[text()=' Login ']");
+	static By Homepage=By.xpath("//img[@alt='client brand banner']");
+	
+	public static WebElement loginpageWebEle()
+	{
+		WebElement loginpage=d.findElement(loginpage_xpath);
+		return loginpage;
+	}
+	
+	public static WebElement usernameWebEle()
+	{
+		WebElement username=d.findElement(Username_xpath);
+		return username;
+	}
+	
+	public static WebElement PasswordWebEle()
+	{
+		WebElement password=d.findElement(Password_xpath);
+		return password;
+	}
+	
+	public static WebElement loginbuttonWebEle()
+	{
+		WebElement loginbutton=d.findElement(Loginbutton_xpath);
+		return loginbutton;
+	}
+	public static void usernamekeys(String username)
+	{
+		usernameWebEle().click();
+		usernameWebEle().sendKeys(username);
+	}
+	
+	public static void passwordkeys(String password)
+	{
+		PasswordWebEle().click();
+		PasswordWebEle().sendKeys(password);
+	}
+	
+	public static void loginbuttonkeys()
+	{
+		loginbuttonWebEle().click();
+	}
+}
