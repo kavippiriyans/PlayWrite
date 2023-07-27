@@ -55,5 +55,16 @@ public class Validation extends DriverClass
 			System.out.println("Home page is displayed");
 		}
 	}
-
+	
+	public static void IuserVpassValidation(WebElement IuserVpass) throws Exception
+	{
+		if(!(IuserVpass.isDisplayed()))
+		{
+			throw new Exception("Invalid credentials is not dispalyed");
+		}
+		else
+		{
+			System.out.println("Invalid credentials is displayed");
+		}
+	}
 }
