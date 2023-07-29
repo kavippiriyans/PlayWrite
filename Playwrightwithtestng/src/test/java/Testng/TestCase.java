@@ -29,6 +29,17 @@ public class TestCase extends Driver
 		Login.clicklog();
 		assertTrue(Login.Homepage().isVisible(), "Dashboard page open");
 	}
-	
+	@Test
+	public void Invalid_credential()
+	{
+		Login.enteremail("kavippiriyan2001");
+		String actemail="kavippiriyan2001";
+		assertEquals(actemail, Login.email().inputValue(), "Invalid mail id");
+		Login.enterpass("kavi");
+		String actpass="kavi";
+		assertEquals(actpass, Login.pass().inputValue(), "Invalid pass");
+		Login.clicklog();
+		assertTrue(Login.Errormsg().isVisible(), "Errormsg is Display");
+	}
 
 }
