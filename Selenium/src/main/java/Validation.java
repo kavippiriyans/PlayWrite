@@ -67,4 +67,16 @@ public class Validation extends DriverClass
 			System.out.println("Invalid credentials is displayed");
 		}
 	}
+	
+	public static void NullUserVPassValidation(WebElement NullUserVPass) throws Exception
+	{
+		if(!(NullUserVPass.isDisplayed()))
+		{
+			throw new Exception("Username is not required");
+		}
+		else
+		{
+			System.out.println("Username is required");
+		}
+	}
 }
