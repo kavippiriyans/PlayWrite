@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
@@ -15,18 +16,13 @@ import com.microsoft.playwright.Playwright;
 public class DriverClass 
 {
 
+    public static Page p;
 	
-	static Playwright pw=Playwright.create();
-	static Browser bw=pw.chromium().launch(new LaunchOptions().setHeadless(false));
-	static Page p=bw.newPage();
-	
-	public static void WebDriver()
-	{
-		p.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
-	}
-    public static void quit()
-    {
-    	p.close();
-    }
+public static void driver(String url)
+{
+	Playwright pw=Playwright.create();
+	Browser b=pw.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+	p=b.newPage();
+	p.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+}
 }
