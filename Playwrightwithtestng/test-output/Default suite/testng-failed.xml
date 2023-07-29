@@ -5,8 +5,8 @@
     <classes>
       <class name="Testng.TestCase">
         <methods>
-          <include name="valid_credential"/>
           <include name="openpage"/>
+          <include name="Invalid_credential"/>
         </methods>
       </class> <!-- Testng.TestCase -->
     </classes>
