@@ -21,3 +21,12 @@ Given Password "admin123"
 Then Entered Password is displayed in dot shape
 And click on login button 
 Then Error message is displayed like Invalid credentials
+
+Scenario: Null Username with Valid Password 
+ 
+Given Username ""
+Then Entered Username is dispalyed
+Given Password "admin123"
+Then Entered Password is displayed in dot shape
+And click on login button 
+Then Error message is displayed like Username Required
