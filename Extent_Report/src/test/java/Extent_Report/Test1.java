@@ -15,12 +15,17 @@ import BasePage.page2;
 
 public class Test1 extends BaseTest
 {
-	
+	@org.testng.annotations.BeforeClass
 	public void BeforeClass()
 	{
 		basepage.et=er.createTest("Test1");
 	}
 
+	public void AfterClass()
+	{
+		
+	}
+	@org.testng.annotations.BeforeMethod
 	public void BeforeMethod(Method m)
 	{
 		basepage.ets=basepage.et.createNode(m.getName());
